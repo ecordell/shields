@@ -16,10 +16,14 @@ function stateColor(s) {
   return { open: '2cbe4e', closed: 'cb2431', merged: '6f42c1' }[s]
 }
 
-function errorMessagesFor(notFoundMessage = 'repo not found') {
+function errorMessagesFor(
+  notFoundMessage = 'repo not found',
+  previewMessage = 'preview mediatype required'
+) {
   return {
     404: notFoundMessage,
     422: notFoundMessage,
+    415: previewMessage,
   }
 }
 
